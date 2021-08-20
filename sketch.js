@@ -45,7 +45,7 @@ function draw() {
   strokeWeight(5);
   stroke(0, 0, 0);
   rotate(hoursArc);
-  line(0, 0, 80, 0);
+  line(0, 0, 110, 0);
   pop();
 
   stroke("gold");
@@ -70,6 +70,7 @@ function draw() {
   text(4, 150, 85);
   text(5, 90, 150);
   rect(30, 20, 55, 55);
-
-  text(seconds,45,55)
+  text(seconds,45,55);
+  stroke("black");
+  text("Mohamad Hamdan",135,200);
 }
