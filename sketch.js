@@ -1,6 +1,6 @@
 function setup() {
   // The size of our starting canvas: 400px width, 400px height
-  createCanvas(500, 500);
+  createCanvas(1000, 600);
   angleMode(DEGREES);
 }
 
@@ -10,9 +10,9 @@ function draw() {
   let minutes = minute();
   // The same as doing: background(220); or --> background(220,220,220);
   background(255, 255, 255);
-  translate(width / 2, height / 2);
+  translate(650, 350);
   stroke("black");
-  strokeWeight(5);
+  strokeWeight(7);
   ellipse(0, 0, 400);
   rotate(-90);
   //text (seconds+ ":" + hour + ":" + minutes;
@@ -22,7 +22,7 @@ function draw() {
   let secondsArc = map(seconds, 0, 60, 0, 360);
 
   stroke("black");
-  let minuteArc = map(minutes, 0, 60, 0, 360);
+  let minuteArc = map(minutes, 0, 60, 0, 360)+map(seconds, 0, 60, 0, 6);
 
   stroke("black");
   let hoursArc = map(hours % 12, 0, 12, 0, 360);
@@ -45,7 +45,7 @@ function draw() {
   strokeWeight(5);
   stroke(0, 0, 0);
   rotate(hoursArc);
-  line(0, 0, 100, 0);
+  line(0, 0, 80, 0);
   pop();
 
   stroke("gold");
@@ -69,4 +69,7 @@ function draw() {
   text(11, -90, -138);
   text(4, 150, 85);
   text(5, 90, 150);
+  rect(30, 20, 55, 55);
+
+  text(seconds,45,55)
 }
